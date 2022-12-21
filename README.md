@@ -13,7 +13,8 @@ conda config --add channels bioconda
 conda config --add channels conda-forge
 
 # create new environment in your projects folder of type p00000
-conda create -c conda-forge --prefix /projects/p00000/bioinfo jupyterlab python=3.8 --yes
+wget https://raw.githubusercontent.com/ritika-giri/genomic-data-visualization-tools/main/requirements.txt
+conda create -c conda-forge --prefix /projects/p00000/bioinfo jupyterlab python=3.8 --yes --file requirements.txt
 source activate /projects/p00000/bioinfo
 pip install bio --upgrade
 
